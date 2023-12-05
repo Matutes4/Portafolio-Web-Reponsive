@@ -1,0 +1,16 @@
+/* Barra de navegacion */
+.navbar {
+    padding: 2rem;
+    background-color: rgb(224, 236, 248);
+}
+
+.navbar-collapse {
+ align-items: center; /* Alinea los elementos en el centro*/
+ justify-content: space-between; /* Justificamos el contenido pero, en este caso distribuimos el espacio entre los elementos*/
+}
+ /*  Usamos una media query que le dice al navegador que: Si el dispositivo tiene tal dimensión , este estilo debría aplicarse en lugar del estilo por defecto.*/
+@media screen and (max-width: 767px) { 
+    .navbar-brand {
+        display: none; /* ocultamos el ícono */
+    }
+}
