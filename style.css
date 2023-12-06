@@ -10,8 +10,9 @@
 
 }
 
+/*Estilos generales*/
 section {
-    display: felex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -20,6 +21,29 @@ section {
 h1 {
     font-size: 2.5rem; 
     font-family: 'Rubik Dirt', cursive;
+}
+
+
+.seccion-oscura {
+    color: white;
+    background-color: #1b1b32;
+
+}
+
+.seccion-clara {
+    color: black;
+    background-color: white;
+}
+
+
+.seccion-titulo {
+    font-size: 2rem; /* El tamaño de la letra va hacer el doble del elemento raíz*/
+    padding: 15px 0; /* el padding es de 15px en la parte superior e inferior y 0 a la izquierda y a la derecha*/
+    font-family: 'rubik Dirt', cursive; /*le colocamos el tipo de letra que obtuvimos de google font, y si es que ocurre algo la página debe cargar con Cursive.*/
+}
+
+.seccion-texto {
+    font-size: 0.8rem;
 }
 
 /* Seccion Hero*/
@@ -44,6 +68,69 @@ margin: 20px;
     font-size: 1.5rem;
     color: #615151;
  }
+
+ /*sobre me*/
+ .sobre-mi {
+height: 500px;
+padding: 10px;
+
+ }
+
+ .sobre-mi .contenedor {
+ max-width: 600px;
+ text-align: center; /*esta propiedad afecta solo la alineación del texto dentro del contenedor, no el contenedor en sí.*/
+ margin: auto;
+   
+}
+
+
+/*Experiencia*/
+.experiencia {
+    padding: 40px;
+    
+}
+
+.experiencia .column {
+   padding: 20px; 
+   border: 2px solid #8080804d;
+   flex-direction: column; /*Asignamos una dirección de columna*/
+   align-items: center;
+   justify-content: space-evenly;  /*porque queremos distribuir los elementos equitativamente en el eje principal, que en este caso el eje principal es el vertical ya que estamos asignando una direción de columna.*/
+   transition: all 0.2s ease-in; /* */
+}
+
+.experiencia .column:hover { /* Nos permite asignar un estilo específico cuando el cursor o maus este encima de ese elemento */
+color: white;
+background-color: #1b1b32;
+}
+
+
+
+
+.experiencia-titulo {
+   font-size: 25px; 
+   font-weight: bold;
+   margin: 10px 0;
+}
+
+.badges-contenedor {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10 0;
+}
+
+.badge {
+    margin: 3px
+}
+
+.experiencia i {
+    font-size: 2.5rem;
+    color: #7ade30;
+    background-color: #0a0a23;
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+
  
  /* Adaptable (Responsivo)*/
 
@@ -52,4 +139,10 @@ margin: 20px;
     .navbar-brand {
         display: none; /* ocultamos el ícono */
     }
+}
+
+@media screen and (min-width: /* ancho minímo de 700px , es decir a partir de los 700px se va aplicar este estilo*/700px) {
+   .hero-inferior-imagen { 
+    max-width: 600px; 
+   } 
 }
