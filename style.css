@@ -23,6 +23,28 @@ h1 {
     font-family: 'Rubik Dirt', cursive;
 }
 
+.seccion-descripcion {
+    font-size: 1.2rem;
+    color: #584e4e;
+    }
+
+.seccion-texto {
+    font-size: 0.8rem;
+}
+
+.btn-info {
+    font-size: 1.1rem;
+    
+}
+
+.texto-negro {
+    color: black;
+}
+
+.texto-blanco {
+    color: white;
+}
+
 
 .seccion-oscura {
     color: white;
@@ -40,11 +62,15 @@ h1 {
     font-size: 2rem; /* El tamaño de la letra va hacer el doble del elemento raíz*/
     padding: 15px 0; /* el padding es de 15px en la parte superior e inferior y 0 a la izquierda y a la derecha*/
     font-family: 'rubik Dirt', cursive; /*le colocamos el tipo de letra que obtuvimos de google font, y si es que ocurre algo la página debe cargar con Cursive.*/
+
 }
 
-.seccion-texto {
-    font-size: 0.8rem;
-}
+
+
+
+
+
+
 
 /* Seccion Hero*/
  .hero {
@@ -105,13 +131,20 @@ background-color: #1b1b32;
 }
 
 
-
-
 .experiencia-titulo {
    font-size: 25px; 
    font-weight: bold;
    margin: 10px 0;
 }
+
+.experiencia i {
+    font-size: 2.5rem;
+    color: #7ade30;
+    background-color: #0a0a23;
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+
 
 .badges-contenedor {
     font-size: 20px;
@@ -123,16 +156,79 @@ background-color: #1b1b32;
     margin: 3px
 }
 
-.experiencia i {
-    font-size: 2.5rem;
-    color: #7ade30;
-    background-color: #0a0a23;
-    padding: 8px 19px;
-    border-radius: 50%;
+
+/* Proyectos*/
+
+.proyectos-recientes {
+    padding: 40px;
 }
 
- 
+.proyectos-recientes img {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.proyectos-contenedor {
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+
+.overlay { /* Se usa para colocar el contenido sobre una imagen */
+transition: all 0.2s ease;
+opacity: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}
+
+
+.overlay p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.proyecto {
+    position: relative;
+}
+
+.proyecto:hover img {
+   opacity: 0.2; 
+}
+
+.proyecto:hover .overlay {
+    opacity: 1;
+}
+
+ .overlay .iconos-contenedor { /* indicamos que los iconos se presenten en una sola fila*/
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+ }
+
+ .overlay .i {
+    color: black;
+    font-size: 60px;
+    margin: 10px;
+ }
+
  /* Adaptable (Responsivo)*/
+
+@media screen and (max-width: 400px) { /* para cuando el dispositivo sea mas pequeño el texto tengs un tamaño mas pequeño*/
+    .overlay p {
+      font-size: 18px;  
+    }
+}
+
+.overlay i {
+   font-size: 40px;
+}
 
  /*  Usamos una media query que le dice al navegador que: Si el dispositivo tiene tal dimensión , este estilo debría aplicarse en lugar del estilo por defecto.*/
 @media screen and (max-width: 767px) { 
